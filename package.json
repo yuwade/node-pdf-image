@@ -1,15 +1,15 @@
 {
-  "name": "pdf-image",
+  "name": "pdf-image2",
   "version": "2.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mooz/node-pdf-image.git"
+    "url": "https://github.com/yuwade/node-pdf-image2.git"
   },
   "bugs": {
-    "url": "https://github.com/mooz/node-pdf-image/issues"
+    "url": "https://github.com/yuwade/node-pdf-image2/issues"
   },
-  "homepage": "https://github.com/mooz/node-pdf-image#readme",
+  "homepage": "https://github.com/yuwade/node-pdf-image2#readme",
   "dependencies": {
     "es6-promise": "~4.2.4"
   },
