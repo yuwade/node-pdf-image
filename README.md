@@ -1,11 +1,11 @@
-# pdf-image
+# pdf-image2
 
 Provides an interface to convert PDF's pages to png files in Node.js
 by using ImageMagick.
 
 ## Installation
 
-    npm install pdf-image
+    npm install pdf-image2
 
 Ensure you have `convert`, `gs`, and `pdfinfo` (part of poppler) commands.
 
@@ -38,7 +38,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 #### Convert single page:
 ```javascript
-var PDFImage = require("pdf-image").PDFImage;
+var PDFImage = require("pdf-image2").PDFImage;
 
 var pdfImage = new PDFImage("/tmp/slide.pdf");
 pdfImage.convertPage(0).then(function (imagePath) {
@@ -49,7 +49,7 @@ pdfImage.convertPage(0).then(function (imagePath) {
 
 #### Convert full file
 ```javascript
-var PDFImage = require("pdf-image").PDFImage;
+var PDFImage = require("pdf-image2").PDFImage;
 
 var pdfImage = new PDFImage("/tmp/slide.pdf");
 pdfImage.convertFile().then(function (imagePaths) {
@@ -60,7 +60,7 @@ pdfImage.convertFile().then(function (imagePaths) {
 ```
 #### Convert full file and merge result into single image
 ```javascript
-var PDFImage = require("pdf-image").PDFImage;
+var PDFImage = require("pdf-image2").PDFImage;
 var pdfImage = new PDFImage("/tmp/slide.pdf", {
   combinedImage: true
 });
@@ -72,7 +72,7 @@ pdfImage.convertFile().then(function (imagePaths) {
 
 ## Express
 
-Following example shows an example of pdf-image in Express, which gives
+Following example shows an example of pdf-image2 in Express, which gives
 URLs for each pages of a PDF like
 `http://example.com:3000/tmp/slide.pdf/0.png`.
 
@@ -81,7 +81,7 @@ URLs for each pages of a PDF like
     var pdfPath = req.params[0];
     var pageNumber = req.params[1];
 
-    var PDFImage = require("pdf-image").PDFImage;
+    var PDFImage = require("pdf-image2").PDFImage;
     var pdfImage = new PDFImage(pdfPath);
 
     pdfImage.convertPage(pageNumber).then(function (imagePath) {
