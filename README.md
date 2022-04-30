@@ -17,6 +17,23 @@ Ensure you have `convert`, `gs`, and `pdfinfo` (part of poppler) commands.
 
     brew install imagemagick ghostscript poppler
 
+### Windows
+   
+    choco install imagemagick
+
+if you don't have choco, goto https://chocolatey.org/install
+
+- Windows 7+ / Windows Server 2003+
+- PowerShell v2+ (minimum is v3 for install from this website due to TLS 1.2 requirement)
++ .NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)(minimum is 4.5 for install from this website due to TLS 1.2 requirement)
+
+powershell
+
+```shell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+![src=/md/choco.png](md/choco.png)
+
 ## Usage
 
 #### Convert single page:

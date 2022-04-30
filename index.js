@@ -87,7 +87,7 @@ PDFImage.prototype = {
     var convertOptionsString = this.constructConvertOptions();
     return util.format(
       "%s %s\"%s[%d]\" \"%s\"",
-      this.useGM ? "gm convert" : "convert",
+      this.useGM ? "gm convert" : "magick convert",
       convertOptionsString ? convertOptionsString + " " : "",
       pdfFilePath, pageNumber, outputImagePath
     );
@@ -95,7 +95,7 @@ PDFImage.prototype = {
   constructCombineCommandForFile: function (imagePaths) {
     return util.format(
       "%s -append %s \"%s\"",
-      this.useGM ? "gm convert" : "convert",
+      this.useGM ? "gm convert" : "magick convert",
       imagePaths.join(' '),
       this.getOutputImagePathForFile()
     );
